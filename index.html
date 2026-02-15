@@ -1,30 +1,79 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oaza de Soare</title>
+    <title>Sunset Oasis</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a202c;
+            color: #f7fafc;
+        }
+        /* Additional styles for dark mode, etc. */
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Welcome to Oaza de Soare</h1>
+<body class="bg-gray-900 text-white">
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-lg font-bold">Sunset Oasis</div>
+            <div class="hidden md:flex space-x-4">
+                <a href="#" class="hover:underline">Home</a>
+                <a href="#features" class="hover:underline">Features</a>
+                <a href="#showcase" class="hover:underline">Showcase</a>
+                <a href="#gallery" class="hover:underline">Gallery</a>
+                <a href="#contact" class="hover:underline">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-white" id="mobile-menu-button">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <header class="bg-cover bg-center h-screen" style="background-image: url('path/to/your/image.jpg');">
+        <div class="flex items-center justify-center h-full backdrop-filter backdrop-blur-lg bg-opacity-50">
+            <h1 class="text-5xl font-bold">Welcome to Sunset Oasis</h1>
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>Despre noi</h2>
-            <p>Oaza de Soare este un loc minunat de relaxare și distracție.</p>
-        </section>
-        <section>
-            <h2>Servicii</h2>
-            <ul>
-                <li>Servește mâncăruri delicioase</li>
-                <li>Activități recreative</li>
-                <li>Îngrijire pentru suflet și trup</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Oaza de Soare. Toate drepturile rezervate.</p>
+    <section id="features" class="p-8">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center">Our Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
+                <div class="bg-gray-700 p-6 rounded-lg shadow"><h3 class="text-xl font-semibold">Feature 1</h3><p>Details about feature 1.</p></div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow"><h3 class="text-xl font-semibold">Feature 2</h3><p>Details about feature 2.</p></div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow"><h3 class="text-xl font-semibold">Feature 3</h3><p>Details about feature 3.</p></div>
+            </div>
+        </div>
+    </section>
+    <section id="showcase" class="bg-gray-800 p-8">
+        <h2 class="text-3xl font-bold text-center">Visual Showcase</h2>
+        <img src="path/to/your/showcase-image.jpg" alt="Showcase" class="mx-auto mt-4 rounded-lg" />
+    </section>
+    <section class="bg-gray-900 p-8">
+        <h2 class="text-3xl text-center font-bold">Join Us for the Sunset</h2>
+        <div class="flex items-center justify-center mt-4">
+            <button class="bg-blue-500 text-white px-6 py-2 rounded">Join Now</button>
+        </div>
+    </section>
+    <section id="gallery" class="p-8">
+        <h2 class="text-3xl font-bold text-center">Gallery</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+            <img src="path/to/gallery/image1.jpg" alt="Gallery 1" class="rounded-lg" />
+            <img src="path/to/gallery/image2.jpg" alt="Gallery 2" class="rounded-lg" />
+            <img src="path/to/gallery/image3.jpg" alt="Gallery 3" class="rounded-lg" />
+            <img src="path/to/gallery/image4.jpg" alt="Gallery 4" class="rounded-lg" />
+        </div>
+    </section>
+    <footer class="bg-gray-800 p-4">
+        <div class="text-center">
+            <p>&copy; 2026 Sunset Oasis. All rights reserved.</p>
+        </div>
     </footer>
+    <script>
+        // Add mobile nav functionality here
+    </script>
 </body>
 </html>
