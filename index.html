@@ -1,303 +1,169 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunset Oasis</title>
+    <style>
+        /* Variable Colors */
+        :root {
+            --primary-color: #ff7f50; /* coral orange */
+            --background-color: rgba(0, 0, 0, 0.8); /* dark background */
+            --card-background: rgba(255, 255, 255, 0.1); /* glassmorphism */
+            --text-color: #ffffff; /* white text */
+        }
 
-<html class="dark" lang="ro"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Sunset Oasis - Cazare Premium lângă Târgu Mureș</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#ee9d2b",
-                        "background-light": "#f8f7f6",
-                        "background-dark": "#221a10",
-                    },
-                    fontFamily: {
-                        "display": ["Manrope", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.5rem",
-                        "lg": "1rem",
-                        "xl": "1.5rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
-<style>
         body {
-            font-family: 'Manrope', sans-serif;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            transition: background-color 0.5s ease;
         }
-        .glass-effect {
-            background: rgba(34, 26, 16, 0.8);
-            backdrop-filter: blur(12px);
+
+        /* Navigation styles */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 1rem;
+            background: var(--card-background);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url('hero-background.jpg'); /* add a background image */
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            z-index: 1;
+        }
+
+        /* Features Cards */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            padding: 2rem;
+        }
+
+        .feature-card {
+            background: var(--card-background);
+            padding: 1rem;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Rooms Showcase */
+        .rooms-showcase {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.5rem;
+            padding: 2rem;
+        }
+
+        /* Call to Action (CTA) */
+        .cta {
+            text-align: center;
+            padding: 2rem;
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: var(--card-background);
+            position: relative;
+        }
+
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased">
-<!-- Header / Navigation -->
-<nav class="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-primary/10">
-<div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-3xl">wb_sunny</span>
-<span class="text-xl font-bold tracking-tight uppercase">Sunset Oasis</span>
-</div>
-<div class="hidden md:flex items-center gap-8 font-medium text-sm tracking-wide uppercase">
-<a class="hover:text-primary transition-colors" href="#">Acasă</a>
-<a class="hover:text-primary transition-colors" href="#">Camere</a>
-<a class="hover:text-primary transition-colors" href="#">Facilități</a>
-<a class="hover:text-primary transition-colors" href="#">Galerie</a>
-</div>
-<div class="flex items-center gap-4">
-<button class="bg-primary hover:bg-primary/90 text-background-dark font-bold py-2.5 px-6 rounded-lg transition-all transform hover:scale-105 hidden sm:block">
-                    Rezervă Acum
-                </button>
-<button class="material-symbols-outlined md:hidden text-3xl">menu</button>
-</div>
-</div>
-</nav>
-<!-- Hero Section -->
-<section class="relative h-screen flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-background-dark/90 z-10"></div>
-<div class="w-full h-full bg-cover bg-center bg-no-repeat scale-105" data-alt="Luxurious resort poolside during a golden sunset" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBjD6taSJuz89rkVHdNNnqChMM96UONDGap_FKjeQpKm-08s6UEALrcEXajGRjrWVjyCXWWFaUISvWjDpdvv-YgPzs5fGVmzyuPGIL1Q7YeotLd-9k-65jWaAb9BkdI7dwrumm3eerA_WrE1ln2O_RWJpkDY_hUW8atVGAQW2oeqi2li58ZKDu0jY8cDnDHXZxQ0jCB-1p1unnfOsOUMpqsBx3RZr51Bd1Bxrn2PAq39dhaVG261dxTvZ3X45-7ZsNyy9956cGI35Ox');">
-</div>
-</div>
-<div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
-<span class="inline-block text-primary font-bold tracking-[0.3em] uppercase mb-4 text-sm sm:text-base">Experiență Premium în Natură</span>
-<h1 class="text-5xl sm:text-7xl lg:text-8xl font-black text-white mb-6 leading-[1.1] tracking-tighter">
-                Sunset Oasis
-            </h1>
-<p class="text-lg sm:text-2xl text-white/80 mb-10 font-light max-w-2xl mx-auto leading-relaxed">
-                Descoperă liniștea absolută și confortul desăvârșit la doar câteva minute de Târgu Mureș.
-            </p>
-<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-<button class="w-full sm:w-auto min-w-[200px] bg-primary text-background-dark font-bold py-4 px-8 rounded-xl text-lg transition-all hover:shadow-[0_0_20px_rgba(238,157,43,0.4)]">
-                    Rezervă Acum
-                </button>
-<button class="w-full sm:w-auto min-w-[200px] bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold py-4 px-8 rounded-xl text-lg hover:bg-white/20 transition-all">
-                    Contactează-ne
-                </button>
-</div>
-</div>
-<div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce">
-<span class="material-symbols-outlined text-white/50 text-4xl">expand_more</span>
-</div>
-</section>
-<!-- Value Propositions -->
-<section class="py-24 px-4 bg-background-light dark:bg-background-dark">
-<div class="max-w-7xl mx-auto">
-<div class="text-center mb-16">
-<h2 class="text-3xl sm:text-5xl font-bold mb-4 tracking-tight">De ce să ne alegi?</h2>
-<div class="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Card 1 -->
-<div class="group p-8 rounded-xl bg-white/5 border border-primary/10 hover:border-primary/40 transition-all hover:-translate-y-2">
-<div class="w-14 h-14 bg-primary/20 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-background-dark transition-all">
-<span class="material-symbols-outlined text-3xl">directions_car</span>
-</div>
-<h3 class="text-xl font-bold mb-3">Acces Rapid</h3>
-<p class="text-white/60 leading-relaxed">Locație ideală, situată la doar câteva minute de agitația orașului Târgu Mureș.</p>
-</div>
-<!-- Card 2 -->
-<div class="group p-8 rounded-xl bg-white/5 border border-primary/10 hover:border-primary/40 transition-all hover:-translate-y-2">
-<div class="w-14 h-14 bg-primary/20 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-background-dark transition-all">
-<span class="material-symbols-outlined text-3xl">nature_people</span>
-</div>
-<h3 class="text-xl font-bold mb-3">Evadează din Oraș</h3>
-<p class="text-white/60 leading-relaxed">Uită de zgomot și stres într-un spațiu creat special pentru deconectare totală.</p>
-</div>
-<!-- Card 3 -->
-<div class="group p-8 rounded-xl bg-white/5 border border-primary/10 hover:border-primary/40 transition-all hover:-translate-y-2">
-<div class="w-14 h-14 bg-primary/20 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-background-dark transition-all">
-<span class="material-symbols-outlined text-3xl">park</span>
-</div>
-<h3 class="text-xl font-bold mb-3">Relaxare în Natură</h3>
-<p class="text-white/60 leading-relaxed">Bucură-te de aer curat, grădini generoase și peisaje care îți taie respirația.</p>
-</div>
-<!-- Card 4 -->
-<div class="group p-8 rounded-xl bg-white/5 border border-primary/10 hover:border-primary/40 transition-all hover:-translate-y-2">
-<div class="w-14 h-14 bg-primary/20 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-background-dark transition-all">
-<span class="material-symbols-outlined text-3xl">set_meal</span>
-</div>
-<h3 class="text-xl font-bold mb-3">Pescuit pe Mureș</h3>
-<p class="text-white/60 leading-relaxed">Suntem situați în imediata proximitate a râului Mureș, paradisul pescarilor.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Visual Showcase -->
-<section class="py-12 bg-background-dark overflow-hidden">
-<div class="flex flex-col md:flex-row h-[600px] gap-4 px-4 max-w-[1600px] mx-auto">
-<div class="flex-1 rounded-2xl bg-cover bg-center group relative overflow-hidden" data-alt="Exterior shot of a modern cabin resort" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDj_PfG3SgFNH4-NfeTKD8agAdb4LFaeC6VWbw78NkqPGVc4Xx4FPaW-lIXZNmGtAxtj4mR09WfCiwV2mTXaZtb0OQHld42vK0dW9B-fGf81RVpCs8SyyxGuGqgSFCGhIefF5hN66uYvopaScwfQagOCgQajMwCyIcUa1ITbFTtfld-q_lbAWm6rlJAbVM0UvkZJs1nNF5eNcAhQ1786pSSOTsoYwMk3TkHrAnLDNKrSfbR7-3obuTZWhHWFDBesZiNcCCx3e1Qckxx');">
-<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-end p-8">
-<h4 class="text-2xl font-bold text-white">Camere Luxoase</h4>
-</div>
-</div>
-<div class="flex-[0.6] flex flex-col gap-4">
-<div class="flex-1 rounded-2xl bg-cover bg-center group relative overflow-hidden" data-alt="Modern minimalist interior bedroom with warm lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD1oCCY7m6K9GWI9On2VajLYCYu6nsdKOKsoFat7ZA1fyPLOCJ0JAUgDRimjiOiRoNHdpVhA65kvFJ6SroywotygAkjeU4QMCwJTNPcJCHYTFY9Q0CdTMuK1GICDT-IGmR52zNv45qHxuHaqkbyiX8neFBI0wWR6457zMRQ2KR2Bv_YFrHjdlMSre9C6eoIMJQEmkZCK4t6Db28yiccmrawFnUIt5Jqxrh34-LkX-2v--2WJKpbe3ZQj-pHI422BjJwjKfaoOGvArm2');">
-<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-end p-6">
-<h4 class="text-xl font-bold text-white">Interior Design</h4>
-</div>
-</div>
-<div class="flex-1 rounded-2xl bg-cover bg-center group relative overflow-hidden" data-alt="Sunset landscape reflecting in the river Mures" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDoxgSHT2MwCXlAyPGZ3XVvIkag0ksPq8Bkg-nF4WTysRCgGGkME3EyqyDD_mibRSM0ZK1X0hJc-BEJXcXy3iQgst8t7rjNr7c42-qX6pvnQb197beI-q-dVkgGmbtrQuj-9FqiUouh1QEVITnjftHNFM0WZ7DMdr3L-w288oE4L4ggdjSui08HIiOqcvIfp9QgcV7wPb9fCYrUiJLdtgnlbZiRtTELmm1GV8rAFVpXnKfM1C1bLXEz9h5tmsakeBETBPM9AUioIYl7');">
-<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-end p-6">
-<h4 class="text-xl font-bold text-white">Peisaje Mureș</h4>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="py-24 px-4">
-<div class="max-w-5xl mx-auto bg-primary rounded-3xl p-12 relative overflow-hidden text-center md:text-left md:flex items-center justify-between">
-<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
-<div class="relative z-10">
-<h2 class="text-4xl sm:text-5xl font-black text-background-dark mb-4">Gata pentru relaxare?</h2>
-<p class="text-background-dark/80 text-lg font-medium max-w-lg">Rezervă acum sejurul tău și transformă o zi obișnuită într-o amintire de neuitat.</p>
-</div>
-<div class="mt-8 md:mt-0 relative z-10 flex flex-col sm:flex-row gap-4">
-<button class="bg-background-dark text-white font-bold py-4 px-10 rounded-xl hover:scale-105 transition-transform shadow-xl">
-                    Verifică Disponibilitatea
-                </button>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<!-- Photo Gallery Section -->
-<section class="py-24 px-4 bg-background-dark" id="galerie-camere">
-<div class="max-w-7xl mx-auto">
-<div class="text-center mb-16">
-<span class="text-primary font-bold tracking-[0.2em] uppercase mb-4 block text-sm">Experiență Vizuală</span>
-<h2 class="text-3xl sm:text-5xl font-bold mb-4 tracking-tight">Galeria Camerelor</h2>
-<div class="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Gallery Item 1 -->
-<div class="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/5">
-<img alt="Cameră Dublă Premium" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1oCCY7m6K9GWI9On2VajLYCYu6nsdKOKsoFat7ZA1fyPLOCJ0JAUgDRimjiOiRoNHdpVhA65kvFJ6SroywotygAkjeU4QMCwJTNPcJCHYTFY9Q0CdTMuK1GICDT-IGmR52zNv45qHxuHaqkbyiX8neFBI0wWR6457zMRQ2KR2Bv_YFrHjdlMSre9C6eoIMJQEmkZCK4t6Db28yiccmrawFnUIt5Jqxrh34-LkX-2v--2WJKpbe3ZQj-pHI422BjJwjKfaoOGvArm2"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-60"></div>
-<div class="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform">
-<h4 class="text-xl font-bold text-white">Cameră Dublă Premium</h4>
-<p class="text-primary text-sm font-medium mt-1">Rafinament &amp; Confort</p>
-</div>
-</div>
-<!-- Gallery Item 2 -->
-<div class="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/5">
-<img alt="Suită cu Vedere la Mureș" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoxgSHT2MwCXlAyPGZ3XVvIkag0ksPq8Bkg-nF4WTysRCgGGkME3EyqyDD_mibRSM0ZK1X0hJc-BEJXcXy3iQgst8t7rjNr7c42-qX6pvnQb197beI-q-dVkgGmbtrQuj-9FqiUouh1QEVITnjftHNFM0WZ7DMdr3L-w288oE4L4ggdjSui08HIiOqcvIfp9QgcV7wPb9fCYrUiJLdtgnlbZiRtTELmm1GV8rAFVpXnKfM1C1bLXEz9h5tmsakeBETBPM9AUioIYl7"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-60"></div>
-<div class="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform">
-<h4 class="text-xl font-bold text-white">Suită cu Vedere la Mureș</h4>
-<p class="text-primary text-sm font-medium mt-1">Peisaj Panoramic</p>
-</div>
-</div>
-<!-- Gallery Item 3 -->
-<div class="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/5">
-<img alt="Design Modern" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDojp3is3UarxS9B8T2a1OdcAhrS2GF0_unkrC5Z9784m2sW5Gp0C9gysA9UQH0lqs6EVv6GzKQimTTBX5T2wRgGh0BtuAvE_6xSrH5tGe1pu5nIjsfHftVoVJDjJNaDWdV57YIRPHb-VnTPfbo0HYpMz81Xd_NIOUoHi1m8WjmJxzQlN4GBw6AAL3ScPNL8nWzCg2EgU99lxdX1Nz4mfzRC4vB7vdaWP4fRWGF9ee_n74N0KiBfK7Zbc2TaAq_1MdXewgu8nvBW79HhoEV-mh7V8"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-60"></div>
-<div class="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform">
-<h4 class="text-xl font-bold text-white">Design Modern</h4>
-<p class="text-primary text-sm font-medium mt-1">Arhitectură Contemporană</p>
-</div>
-</div>
-</div>
-</div>
-</section><footer class="bg-background-dark border-t border-white/5 pt-20 pb-10 px-4">
-<div class="max-w-7xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-<div>
-<div class="flex items-center gap-2 mb-6">
-<span class="material-symbols-outlined text-primary text-3xl">wb_sunny</span>
-<span class="text-xl font-bold tracking-tight uppercase">Sunset Oasis</span>
-</div>
-<p class="text-white/50 leading-relaxed mb-6">
-                        Destinația ta premium pentru relaxare și confort, unde natura întâlnește eleganța modernă lângă Târgu Mureș.
-                    </p>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#">
-<span class="material-symbols-outlined">social_leaderboard</span>
-</a>
-<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#">
-<span class="material-symbols-outlined">photo_camera</span>
-</a>
-</div>
-</div>
-<div>
-<h4 class="text-lg font-bold mb-6 border-b border-primary/20 pb-2 inline-block">Link-uri Rapide</h4>
-<ul class="space-y-4 text-white/60">
-<li><a class="hover:text-primary transition-colors" href="#">Camere și Apartamente</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Facilități Resort</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Zona de Pescuit</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Întrebări Frecvente</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-lg font-bold mb-6 border-b border-primary/20 pb-2 inline-block">Contact</h4>
-<ul class="space-y-4 text-white/60">
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">call</span>
-<span>+40 7xx xxx xxx</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">mail</span>
-<span>contact@sunsetoasis.ro</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">location_on</span>
-<span>Lângă Târgu Mureș, Mureș, România</span>
-</li>
-</ul>
-</div>
-<div>
-<h4 class="text-lg font-bold mb-6 border-b border-primary/20 pb-2 inline-block">Newsletter</h4>
-<p class="text-white/50 mb-4 text-sm">Fii primul care află de ofertele noastre speciale.</p>
-<div class="flex gap-2">
-<input class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 w-full focus:outline-none focus:border-primary" placeholder="Email-ul tău" type="email"/>
-<button class="bg-primary p-2 rounded-lg text-background-dark hover:bg-primary/90 transition-all">
-<span class="material-symbols-outlined">send</span>
-</button>
-</div>
-</div>
-</div>
-<div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-white/40 text-sm gap-4">
-<p>© 2024 Sunset Oasis Resort. Toate drepturile rezervate.</p>
-<div class="flex gap-8">
-<a class="hover:text-white transition-colors" href="#">Termeni și Condiții</a>
-<a class="hover:text-white transition-colors" href="#">Politica de Confidențialitate</a>
-</div>
-</div>
-</div>
-</footer>
-<!-- Bottom Mobile Nav -->
-<div class="md:hidden fixed bottom-0 left-0 right-0 z-50 glass-effect border-t border-primary/20 flex justify-around p-4 pb-6">
-<a class="flex flex-col items-center gap-1 text-primary" href="#">
-<span class="material-symbols-outlined">home</span>
-<span class="text-[10px] font-bold uppercase">Acasă</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-white/60" href="#">
-<span class="material-symbols-outlined">calendar_month</span>
-<span class="text-[10px] font-bold uppercase">Rezervă</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-white/60" href="#">
-<span class="material-symbols-outlined">photo_library</span>
-<span class="text-[10px] font-bold uppercase">Galerie</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-white/60" href="#">
-<span class="material-symbols-outlined">person</span>
-<span class="text-[10px] font-bold uppercase">Cont</span>
-</a>
-</div>
-</body></html>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <h1>Welcome to Sunset Oasis</h1>
+    </section>
+    <section class="features" id="features">
+        <div class="feature-card">
+            <h2>Feature 1</h2>
+            <p>Feature 1 description goes here.</p>
+        </div>
+        <div class="feature-card">
+            <h2>Feature 2</h2>
+            <p>Feature 2 description goes here.</p>
+        </div>
+        <div class="feature-card">
+            <h2>Feature 3</h2>
+            <p>Feature 3 description goes here.</p>
+        </div>
+    </section>
+    <section class="rooms-showcase" id="rooms">
+        <h2>Our Rooms</h2>
+        <div>Room Showcase 1</div>
+        <div>Room Showcase 2</div>
+        <div>Room Showcase 3</div>
+    </section>
+    <section class="gallery" id="gallery">
+        <h2>Gallery</h2>
+        <div>Image 1</div>
+        <div>Image 2</div>
+        <div>Image 3</div>
+    </section>
+    <section class="cta">
+        <h2>Ready to book?</h2>
+        <p>Contact us today!</p>
+    </section>
+    <footer>
+        <p>&copy; 2026 Sunset Oasis. All rights reserved.</p>
+    </footer>
+</body>
+</html>
