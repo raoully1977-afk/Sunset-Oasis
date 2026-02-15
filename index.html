@@ -1,169 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunset Oasis</title>
-    <style>
-        /* Variable Colors */
-        :root {
-            --primary-color: #ff7f50; /* coral orange */
-            --background-color: rgba(0, 0, 0, 0.8); /* dark background */
-            --card-background: rgba(255, 255, 255, 0.1); /* glassmorphism */
-            --text-color: #ffffff; /* white text */
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            transition: background-color 0.5s ease;
-        }
-
-        /* Navigation styles */
-        nav {
-            display: flex;
-            justify-content: space-around;
-            padding: 1rem;
-            background: var(--card-background);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #fff;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-image: url('hero-background.jpg'); /* add a background image */
-            background-size: cover;
-            position: relative;
-        }
-
-        .hero-overlay {
-            background: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            z-index: 1;
-        }
-
-        /* Features Cards */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            padding: 2rem;
-        }
-
-        .feature-card {
-            background: var(--card-background);
-            padding: 1rem;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: scale(1.05);
-        }
-
-        /* Rooms Showcase */
-        .rooms-showcase {
-            padding: 2rem;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        /* Gallery */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 0.5rem;
-            padding: 2rem;
-        }
-
-        /* Call to Action (CTA) */
-        .cta {
-            text-align: center;
-            padding: 2rem;
-            background: var(--primary-color);
-            color: white;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: var(--card-background);
-            position: relative;
-        }
-
-    </style>
+    <title>Oaza de Soare</title>
 </head>
 <body>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#features">Features</a>
-        <a href="#rooms">Rooms</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <h1>Welcome to Sunset Oasis</h1>
-    </section>
-    <section class="features" id="features">
-        <div class="feature-card">
-            <h2>Feature 1</h2>
-            <p>Feature 1 description goes here.</p>
-        </div>
-        <div class="feature-card">
-            <h2>Feature 2</h2>
-            <p>Feature 2 description goes here.</p>
-        </div>
-        <div class="feature-card">
-            <h2>Feature 3</h2>
-            <p>Feature 3 description goes here.</p>
-        </div>
-    </section>
-    <section class="rooms-showcase" id="rooms">
-        <h2>Our Rooms</h2>
-        <div>Room Showcase 1</div>
-        <div>Room Showcase 2</div>
-        <div>Room Showcase 3</div>
-    </section>
-    <section class="gallery" id="gallery">
-        <h2>Gallery</h2>
-        <div>Image 1</div>
-        <div>Image 2</div>
-        <div>Image 3</div>
-    </section>
-    <section class="cta">
-        <h2>Ready to book?</h2>
-        <p>Contact us today!</p>
-    </section>
+    <header>
+        <h1>Welcome to Oaza de Soare</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Despre noi</h2>
+            <p>Oaza de Soare este un loc minunat de relaxare și distracție.</p>
+        </section>
+        <section>
+            <h2>Servicii</h2>
+            <ul>
+                <li>Servește mâncăruri delicioase</li>
+                <li>Activități recreative</li>
+                <li>Îngrijire pentru suflet și trup</li>
+            </ul>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2026 Sunset Oasis. All rights reserved.</p>
+        <p>&copy; 2026 Oaza de Soare. Toate drepturile rezervate.</p>
     </footer>
 </body>
 </html>
