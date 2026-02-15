@@ -2,10 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunset Oasis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #1e1e1e;
+            padding: 1rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        h1 {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .hero {
+            background-image: url('hero.jpg');
+            height: 400px;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .value-propositions {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+        footer {
+            background-color: #1e1e1e;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Sunset Oasis</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="hero">
+        <h1>Welcome to Sunset Oasis</h1>
+    </div>
+    <div class="value-propositions">
+        <div><h2>Relaxing Atmosphere</h2><p>Experience tranquility like never before.</p></div>
+        <div><h2>Amazing Views</h2><p>Enjoy stunning sunsets daily.</p></div>
+        <div><h2>Excellent Services</h2><p>Your comfort is our priority.</p></div>
+    </div>
+    <div class="gallery">
+        <img src="image1.jpg" alt="Gallery Image 1">
+        <img src="image2.jpg" alt="Gallery Image 2">
+        <img src="image3.jpg" alt="Gallery Image 3">
+    </div>
+    <footer>
+        <p>&copy; 2026 Sunset Oasis. All rights reserved.</p>
+    </footer>
 </body>
 </html>
